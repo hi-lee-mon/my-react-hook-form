@@ -11,7 +11,7 @@ export async function getCode(lang: BundledLanguage) {
   const [_schema, _slash, _domain, ...reqPath] = requestUrl?.split('/') ?? []
 
   // ファイルのパスを指定
-  const filePath = path.join(process.cwd(), `app/(default)/${reqPath.join('/')}/page.tsx`)
+  const filePath = path.join(process.env.NEXT_PUBLIC_BASE_URL ?? '', `app/(default)/${reqPath.join('/')}/page.tsx`)
 
   // ファイルの内容を同期的に読み込む
   const codeString = fs.readFileSync(filePath, 'utf-8')
