@@ -6,7 +6,8 @@ import { getHighlighter } from 'shikiji'
 export async function getCode() {
   const requestUrl = headers().get('x-url')
 
-  const [_1, _2, _3, ...reqPath] = requestUrl?.split('/') ?? []
+  // http://localhost:3000/client/rhf/tuto => ['http:', '', 'localhost:3000', 'client', 'rhf', 'tuto']
+  const [_schema, _slash, _domain, ...reqPath] = requestUrl?.split('/') ?? []
 
   // ファイルのパスを指定
   const filePath = path.join(process.cwd(), `app/(default)/${reqPath.join('/')}/page.tsx`)
