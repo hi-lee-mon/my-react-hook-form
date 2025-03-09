@@ -31,7 +31,7 @@ export default function Page() {
             <div>
               <Label htmlFor="username">ユーザー名</Label>
               {/* 4.カスタムコンポーネントにfieldを渡すことでRHFと接続する */}
-              <Input {...field} id="username" />
+              <Input {...field} id="username" aria-invalid={fieldState.error ? 'true' : 'false'} />
               {fieldState.error && <p className="text-red-500">{fieldState.error.message}</p>}
             </div>
           )}
