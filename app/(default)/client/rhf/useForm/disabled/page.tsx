@@ -48,8 +48,8 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h3 className="text-lg font-medium mb-2">disabled: true</h3>
-        <p className="text-sm text-gray-500 mb-4">フォーム全体が無効化されます</p>
+        <h3 className="mb-2 text-lg font-medium">disabled: true</h3>
+        <p className="mb-4 text-sm text-gray-500">フォーム全体が無効化されます</p>
         <form onSubmit={formDisabled.handleSubmit(() => {})} className="space-y-2">
           <div>
             <Label htmlFor="name">名前</Label>
@@ -68,8 +68,8 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="text-lg font-medium mb-2">動的に切り替え可能なdisabled</h3>
-        <div className="flex items-center space-x-2 mb-4">
+        <h3 className="mb-2 text-lg font-medium">動的に切り替え可能なdisabled</h3>
+        <div className="mb-4 flex items-center space-x-2">
           <Switch id="toggle-disabled" checked={isDisabled} onCheckedChange={setIsDisabled} />
           <Label htmlFor="toggle-disabled">フォームを{isDisabled ? '無効化' : '有効化'}</Label>
         </div>
@@ -91,8 +91,8 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="text-lg font-medium mb-2">disabled: false（デフォルト）</h3>
-        <p className="text-sm text-gray-500 mb-4">フォームは通常通り有効です</p>
+        <h3 className="mb-2 text-lg font-medium">disabled: false（デフォルト）</h3>
+        <p className="mb-4 text-sm text-gray-500">フォームは通常通り有効です</p>
         <form onSubmit={formEnabled.handleSubmit(() => {})} className="space-y-2">
           <div>
             <Label htmlFor="name">名前</Label>

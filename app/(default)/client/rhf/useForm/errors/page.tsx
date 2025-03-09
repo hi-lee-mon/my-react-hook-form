@@ -59,9 +59,9 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h3 className="text-lg font-medium mb-2">errorsオプションを使用</h3>
-        <p className="text-sm text-gray-500 mb-4">外部から設定されたエラーをフォームに反映します</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+        <h3 className="mb-2 text-lg font-medium">errorsオプションを使用</h3>
+        <p className="mb-4 text-sm text-gray-500">外部から設定されたエラーをフォームに反映します</p>
+        <div className="mb-4 flex flex-wrap gap-2">
           <Button onClick={setNameError} variant="outline" size="sm">
             名前にエラーを設定
           </Button>
@@ -92,8 +92,8 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="text-lg font-medium mb-2">通常のフォーム（errorsオプションなし）</h3>
-        <p className="text-sm text-gray-500 mb-4">通常のバリデーションエラーのみが表示されます</p>
+        <h3 className="mb-2 text-lg font-medium">通常のフォーム（errorsオプションなし）</h3>
+        <p className="mb-4 text-sm text-gray-500">通常のバリデーションエラーのみが表示されます</p>
         <form onSubmit={normalForm.handleSubmit(() => {})} className="space-y-2">
           <div>
             <Label htmlFor="name">名前</Label>

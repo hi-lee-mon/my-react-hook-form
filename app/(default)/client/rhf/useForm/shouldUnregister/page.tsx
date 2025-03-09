@@ -57,8 +57,8 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h3 className="text-lg font-medium mb-2">shouldUnregister: true</h3>
-        <p className="text-sm text-gray-500 mb-4">
+        <h3 className="mb-2 text-lg font-medium">shouldUnregister: true</h3>
+        <p className="mb-4 text-sm text-gray-500">
           フィールドがアンマウントされると、そのフィールドの値はフォームから削除されます
         </p>
         <form onSubmit={formWithUnregister.handleSubmit(onSubmitWithUnregister)} className="space-y-2">
@@ -103,7 +103,7 @@ export default function Page() {
           </div>
 
           {showAddress && (
-            <div className="space-y-2 border p-4 rounded">
+            <div className="space-y-2 rounded border p-4">
               <div>
                 <Label htmlFor="street">住所</Label>
                 <Input {...formWithUnregister.register('address.street')} />
@@ -127,8 +127,8 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="text-lg font-medium mb-2">shouldUnregister: false（デフォルト）</h3>
-        <p className="text-sm text-gray-500 mb-4">
+        <h3 className="mb-2 text-lg font-medium">shouldUnregister: false（デフォルト）</h3>
+        <p className="mb-4 text-sm text-gray-500">
           フィールドがアンマウントされても、そのフィールドの値はフォームに残ります
         </p>
         <form onSubmit={formWithoutUnregister.handleSubmit(onSubmitWithoutUnregister)} className="space-y-2">
@@ -173,7 +173,7 @@ export default function Page() {
           </div>
 
           {showAddress && (
-            <div className="space-y-2 border p-4 rounded">
+            <div className="space-y-2 rounded border p-4">
               <div>
                 <Label htmlFor="street">住所</Label>
                 <Input {...formWithoutUnregister.register('address.street')} />

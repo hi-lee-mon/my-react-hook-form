@@ -6,7 +6,7 @@ import path from 'path'
 export default function Page() {
   const folders = getDirectories(path.join(process.cwd(), 'app/(default)/client/rhf/useForm'))
   return (
-    <div className="flex flex-row gap-2 flex-wrap">
+    <div className="flex flex-row flex-wrap gap-2">
       {folders.map((folder) => {
         return (
           <Button asChild variant="outline" key={folder}>

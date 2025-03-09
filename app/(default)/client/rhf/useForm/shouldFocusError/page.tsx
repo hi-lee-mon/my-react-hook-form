@@ -35,8 +35,8 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h3 className="text-lg font-medium mb-2">shouldFocusError: true（デフォルト）</h3>
-        <p className="text-sm text-gray-500 mb-4">
+        <h3 className="mb-2 text-lg font-medium">shouldFocusError: true（デフォルト）</h3>
+        <p className="mb-4 text-sm text-gray-500">
           エラーが発生した場合、最初のエラーフィールドに自動的にフォーカスします
         </p>
         <form onSubmit={formWithFocus.handleSubmit(() => {})} className="space-y-2">
@@ -83,8 +83,8 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="text-lg font-medium mb-2">shouldFocusError: false</h3>
-        <p className="text-sm text-gray-500 mb-4">エラーが発生しても、フィールドに自動的にフォーカスしません</p>
+        <h3 className="mb-2 text-lg font-medium">shouldFocusError: false</h3>
+        <p className="mb-4 text-sm text-gray-500">エラーが発生しても、フィールドに自動的にフォーカスしません</p>
         <form onSubmit={formWithoutFocus.handleSubmit(() => {})} className="space-y-2">
           <div>
             <Label htmlFor="name">名前</Label>

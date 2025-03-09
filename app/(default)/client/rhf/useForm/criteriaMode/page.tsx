@@ -29,8 +29,8 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h3 className="text-lg font-medium mb-2">criteriaMode: "firstError"（デフォルト）</h3>
-        <p className="text-sm text-gray-500 mb-4">最初のエラーメッセージのみが表示されます</p>
+        <h3 className="mb-2 text-lg font-medium">criteriaMode: 'firstError'（デフォルト）</h3>
+        <p className="mb-4 text-sm text-gray-500">最初のエラーメッセージのみが表示されます</p>
         <form onSubmit={formFirstError.handleSubmit(() => {})} className="space-y-2">
           <div>
             <Label htmlFor="password">パスワード</Label>
@@ -62,8 +62,8 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="text-lg font-medium mb-2">criteriaMode: "all"</h3>
-        <p className="text-sm text-gray-500 mb-4">すべてのエラーメッセージが表示されます</p>
+        <h3 className="mb-2 text-lg font-medium">criteriaMode: 'all'</h3>
+        <p className="mb-4 text-sm text-gray-500">すべてのエラーメッセージが表示されます</p>
         <form onSubmit={formAllErrors.handleSubmit(() => {})} className="space-y-2">
           <div>
             <Label htmlFor="password">パスワード</Label>

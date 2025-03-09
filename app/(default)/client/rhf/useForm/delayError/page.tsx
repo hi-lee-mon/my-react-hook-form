@@ -39,8 +39,8 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h3 className="text-lg font-medium mb-2">delayErrorなし</h3>
-        <p className="text-sm text-gray-500 mb-4">エラーはすぐに表示されます</p>
+        <h3 className="mb-2 text-lg font-medium">delayErrorなし</h3>
+        <p className="mb-4 text-sm text-gray-500">エラーはすぐに表示されます</p>
         <form onSubmit={formWithoutDelay.handleSubmit(() => {})} className="space-y-2">
           <div>
             <Label htmlFor="email">メールアドレス</Label>
@@ -62,8 +62,8 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="text-lg font-medium mb-2">delayError: 500ms</h3>
-        <p className="text-sm text-gray-500 mb-4">エラーは500ミリ秒後に表示されます</p>
+        <h3 className="mb-2 text-lg font-medium">delayError: 500ms</h3>
+        <p className="mb-4 text-sm text-gray-500">エラーは500ミリ秒後に表示されます</p>
         <form onSubmit={formWithDelay500.handleSubmit(() => {})} className="space-y-2">
           <div>
             <Label htmlFor="email">メールアドレス</Label>
@@ -85,8 +85,8 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="text-lg font-medium mb-2">delayError: 2000ms</h3>
-        <p className="text-sm text-gray-500 mb-4">エラーは2秒後に表示されます</p>
+        <h3 className="mb-2 text-lg font-medium">delayError: 2000ms</h3>
+        <p className="mb-4 text-sm text-gray-500">エラーは2秒後に表示されます</p>
         <form onSubmit={formWithDelay2000.handleSubmit(() => {})} className="space-y-2">
           <div>
             <Label htmlFor="email">メールアドレス</Label>

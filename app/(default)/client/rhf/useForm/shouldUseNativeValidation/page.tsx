@@ -38,8 +38,8 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h3 className="text-lg font-medium mb-2">shouldUseNativeValidation: true</h3>
-        <p className="text-sm text-gray-500 mb-4">
+        <h3 className="mb-2 text-lg font-medium">shouldUseNativeValidation: true</h3>
+        <p className="mb-4 text-sm text-gray-500">
           ブラウザのネイティブバリデーションを使用します（フォーカスアウト時にブラウザのポップアップが表示されます）
         </p>
         <form onSubmit={formWithNativeValidation.handleSubmit(() => {})} className="space-y-2">
@@ -96,8 +96,8 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="text-lg font-medium mb-2">shouldUseNativeValidation: false（デフォルト）</h3>
-        <p className="text-sm text-gray-500 mb-4">
+        <h3 className="mb-2 text-lg font-medium">shouldUseNativeValidation: false（デフォルト）</h3>
+        <p className="mb-4 text-sm text-gray-500">
           React Hook Formのバリデーションのみを使用します（ブラウザのネイティブポップアップは表示されません）
         </p>
         <form onSubmit={formWithoutNativeValidation.handleSubmit(() => {})} className="space-y-2">
