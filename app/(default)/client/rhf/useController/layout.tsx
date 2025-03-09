@@ -1,10 +1,7 @@
 import Description from '@/components/description'
 import DualColumnLayout from '@/components/layout/dual-column-layout'
-import { getCode } from '@/lib/getCode'
 
 export default async function Layout(props: { children: React.ReactNode }) {
-  const code = await getCode('tsx')
-
   return (
     <DualColumnLayout
       title="useControllerによる統合"
