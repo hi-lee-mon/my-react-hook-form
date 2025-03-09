@@ -14,7 +14,7 @@ export async function getCode(lang: BundledLanguage) {
   const filePath = path.join(process.cwd(), `app/(default)/${reqPath.join('/')}/page.tsx`)
 
   // ファイルの内容を同期的に読み込む
-  const codeString = fs.readFileSync(filePath, 'utf-8').replace(/\n/g, '')
+  const codeString = fs.readFileSync(filePath, 'utf-8')
 
   const highlighter = await getHighlighter({
     themes: ['github-dark', 'min-light'],
