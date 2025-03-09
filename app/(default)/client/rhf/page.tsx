@@ -6,7 +6,7 @@ export default async function Page() {
     <div>
       <h1 className="mb-4 text-2xl font-bold">React Hook Form クライアント</h1>
       <Button asChild variant="outline">
-        <Link href="/client/rhf/tuto">チュートリアル</Link>
+        <Link href="/client/rhf/base">基本</Link>
       </Button>
     </div>
   )
