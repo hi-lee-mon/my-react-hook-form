@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { useForm } from 'react-hook-form'
 
 export default function Page() {
-  const defaultValues = {
+  const _defaultValues = {
     defaultValues: {
       name: 'name',
       category: {

@@ -29,7 +29,7 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h3 className="mb-2 text-lg font-medium">criteriaMode: 'firstError'（デフォルト）</h3>
+        <h3 className="mb-2 text-lg font-medium">criteriaMode: firstError（デフォルト）</h3>
         <p className="mb-4 text-sm text-gray-500">最初のエラーメッセージのみが表示されます</p>
         <form onSubmit={formFirstError.handleSubmit(() => {})} className="space-y-2">
           <div>
@@ -62,7 +62,7 @@ export default function Page() {
       </div>
 
       <div>
-        <h3 className="mb-2 text-lg font-medium">criteriaMode: 'all'</h3>
+        <h3 className="mb-2 text-lg font-medium">criteriaMode: all</h3>
         <p className="mb-4 text-sm text-gray-500">すべてのエラーメッセージが表示されます</p>
         <form onSubmit={formAllErrors.handleSubmit(() => {})} className="space-y-2">
           <div>
