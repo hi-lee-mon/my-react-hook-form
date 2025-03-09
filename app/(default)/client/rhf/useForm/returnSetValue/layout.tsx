@@ -7,7 +7,7 @@ export default async function Layout(props: { children: React.ReactNode }) {
       title="useFormのreturn_setValue"
       description={
         <Description>
-          値を更新
+          指定したフォームのUIと状態を更新する
           <br />
           setValueを呼び出しても再レンダリングはトリガーされない（dom上の見え方と裏で管理する値はちゃんと変わる）
           <br />
