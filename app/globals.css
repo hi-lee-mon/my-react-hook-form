@@ -73,7 +73,7 @@
   }
 }
 
-/* shikiのコードの行番号を表示 */
+/* コードの行番号を表示 */
 .shiki {
   counter-reset: step;
   counter-increment: step 0;

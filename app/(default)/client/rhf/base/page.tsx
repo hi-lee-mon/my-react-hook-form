@@ -21,7 +21,6 @@ export default function Page() {
     age: 0,
   })
   const [_, setErrorsState] = useState<FieldErrors<IFormInput>>({})
-
   const {
     register,
     handleSubmit,
