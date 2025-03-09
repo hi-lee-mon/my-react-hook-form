@@ -1,14 +1,11 @@
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+import BackButton from '@/app/(default)/client/rhf/back-button'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="mb-4 flex flex-row gap-2">
         <h1 className="text-2xl font-bold">React Hook Form クライアント</h1>
-        <Button asChild variant="secondary">
-          <Link href="/client/rhf">戻る</Link>
-        </Button>
+        <BackButton />
       </div>
       {children}
     </div>
