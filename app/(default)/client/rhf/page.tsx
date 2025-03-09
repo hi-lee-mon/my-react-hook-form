@@ -12,17 +12,14 @@ const getDirectories = (source: string) =>
 export default async function Page() {
   const folders = getDirectories(path.join(process.cwd(), 'app/(default)/client/rhf'))
   return (
-    <div>
-      <h1 className="mb-4 text-2xl font-bold">React Hook Form クライアント</h1>
-      <div className="flex flex-col gap-2">
-        {folders.map((folder) => {
-          return (
-            <Button asChild variant="outline" key={folder}>
-              <Link href={`/client/rhf/${folder}`}>{folder}</Link>
-            </Button>
-          )
-        })}
-      </div>
+    <div className="flex flex-col gap-2">
+      {folders.map((folder) => {
+        return (
+          <Button asChild variant="outline" key={folder}>
+            <Link href={`/client/rhf/${folder}`}>{folder}</Link>
+          </Button>
+        )
+      })}
     </div>
   )
 }

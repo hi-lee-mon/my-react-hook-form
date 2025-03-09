@@ -41,6 +41,7 @@ export default function Page() {
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
         <Controller name="firstName" control={control} render={({ field }) => <TextField {...field} label="名" />} />
         <Controller
+          // name属性はControllerコンポーネントに渡す
           name="iceCreamType"
           control={control}
           render={({ field }) => {
