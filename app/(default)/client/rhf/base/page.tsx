@@ -54,6 +54,7 @@ export default function Page() {
               id="lastName"
               // react-hook-formのregisterとコンポーネントの接続
               {...register('lastName', { pattern: { value: /^[あ-ん]+$/i, message: 'ひらがなで入力してください' } })}
+              aria-invalid={errors.lastName ? 'true' : 'false'}
             />
           </Label>
           {errors.lastName && <p className="text-red-400">{errors.lastName.message}</p>}
@@ -72,6 +73,7 @@ export default function Page() {
                   }
                 },
               })}
+              aria-invalid={errors.firstName ? 'true' : 'false'}
             />
           </Label>
           {errors.firstName && <p className="text-red-400">{errors.firstName.message}</p>}
@@ -86,6 +88,7 @@ export default function Page() {
                 min: { value: 18, message: '18歳以上で入力してください' },
                 max: { value: 99, message: '99歳以下で入力してください' },
               })}
+              aria-invalid={errors.age ? 'true' : 'false'}
             />
           </Label>
           {errors.age && <p className="text-red-400">{errors.age.message}</p>}
