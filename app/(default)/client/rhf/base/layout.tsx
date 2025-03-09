@@ -1,15 +1,5 @@
-import { getCode } from '@/lib/getCode'
+import DualColumnLayout from '@/components/layout/dual-column-layout'
 
 export default async function Layout(props: { children: React.ReactNode }) {
-  const code = await getCode('tsx')
-
-  return (
-    <div className="flex flex-col gap-4">
-      <h1 className="text-2xl font-bold">基本</h1>
-      <div className="flex flex-row gap-4">
-        <div className="w-1/2 rounded-lg border p-4">{props.children}</div>
-        <div className="w-1/2 rounded-lg border" dangerouslySetInnerHTML={{ __html: code }} />
-      </div>
-    </div>
-  )
+  return <DualColumnLayout title="基本" view={props.children} />
 }

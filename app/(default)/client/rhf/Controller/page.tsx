@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { useState } from 'react'
-import { Control, Controller, RegisterOptions, useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 
 interface IFormInput {
   username: string
@@ -40,31 +40,5 @@ export default function Page() {
       </form>
       <p>ユーザー名: {formState.username}</p>
     </div>
-  )
-}
-
-function CustomInput({
-  name,
-  rules,
-  control,
-}: {
-  name: string
-  rules?: RegisterOptions
-  control: Control<any> // eslint-disable-line @typescript-eslint/no-explicit-any
-}) {
-  return (
-    <Controller
-      name={name}
-      control={control}
-      rules={rules}
-      render={({ field, fieldState }) => (
-        <div>
-          <Label htmlFor="username">ユーザー名</Label>
-          {/* 4.カスタムコンポーネントにfieldを渡すことでRHFと接続する */}
-          <Input {...field} id="username" />
-          {fieldState.error && <p className="text-red-500">{fieldState.error.message}</p>}
-        </div>
-      )}
-    />
   )
 }

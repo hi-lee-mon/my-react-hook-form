@@ -2,21 +2,32 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import type { Control, RegisterOptions } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 
+interface IFormInput {
+  username: string
+}
+
 export default function Page() {
-  const { control, handleSubmit } = useForm({ defaultValues: { username: '' } })
+  const [formState, setFormState] = useState<IFormInput>({
+    username: '',
+  })
+  const { control, handleSubmit } = useForm<IFormInput>({ defaultValues: { username: '' } })
 
   return (
-    <form onSubmit={handleSubmit((data) => console.log(data))}>
-      <div className="flex flex-col gap-2">
-        <CustomInput name="username" rules={{ required: 'ユーザー名は必須です' }} control={control} />
-        <Button type="submit">送信</Button>
-      </div>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit((data) => setFormState(data))}>
+        <div className="flex flex-col gap-2">
+          <CustomInput name="username" rules={{ required: 'ユーザー名は必須です' }} control={control} />
+          <Button type="submit">送信</Button>
+        </div>
+      </form>
+      <p>ユーザー名: {formState.username}</p>
+    </div>
   )
 }
 
